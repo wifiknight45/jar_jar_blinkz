@@ -68,7 +68,7 @@ ssh user@remote "bash -c './scanner.py --host localhost'"
 - **Hashing**: SHA-3 for passwords, SHA-512 for key derivation.
 - **Key Rotation**: Changelog password changes every hour.
 
-## update
+## Update
 Error Handling: Specific exception handling, logging, and potential retry mechanisms are added.
 Signal Protocol Chat: handle_client is updated to use Signal Protocol for encryption.
 Encrypted Installation: The install function handles encryption and persistence.
