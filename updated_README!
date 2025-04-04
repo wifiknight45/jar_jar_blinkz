@@ -1,0 +1,345 @@
+English Version: Step-by-Step Instructions for a Python Beginner
+Step 1: Install Python
+Python is the program that runs your code.
+Open your web browser and go to python.org.
+Click "Downloads" and choose the latest version (e.g., Python 3.11).
+Download the installer for your system (Windows, Mac, or Linux).
+Open the downloaded file to start the installer.
+Check the box "Add Python to PATH" so your computer knows where to find it.
+Click "Install Now" and wait for it to finish.
+To test: Open Command Prompt (Windows: search "cmd") or Terminal (Mac/Linux), type python --version, and press Enter. You should see "Python 3.11.5" or similar.
+Step 2: Install Required Libraries
+Libraries add extra features to Python, like tools for your project.
+Open Command Prompt or Terminal.
+Type these commands one at a time, pressing Enter after each:
+pip install cryptography (for encryption).
+pip install libsignal-protocol-python (for Signal).
+pip install twilio (for SMS).
+Wait for each command to finish (you’ll see text scroll by).
+To check: Type pip list and look for cryptography, twilio, etc., in the list.
+Step 3: Save the Script
+The script is your main program.
+Open a text editor (e.g., Notepad on Windows, TextEdit on Mac, or VS Code).
+Copy the entire script from above.
+Paste it into the text editor.
+Save it as secure_scanner.py (ensure it ends with .py).
+Save it in a folder you can find, like "Desktop" or "Documents".
+Step 4: Set Up Twilio for SMS (Phantom Reaper)
+Twilio lets you send SMS messages.
+Go to twilio.com and sign up with an email and password.
+After signing in, click "Get a Twilio phone number" and copy the number (e.g., +1-555-123-4567).
+On the Twilio dashboard, find "Account SID" and "Auth Token" and copy them.
+Open secure_scanner.py in your text editor.
+Find the phantom_reaper_connect function.
+Replace YOUR_ACCOUNT_SID, YOUR_AUTH_TOKEN, and YOUR_TWILIO_NUMBER with your Twilio details.
+Save the file.
+Step 5: Set Up ProtonMail for Encrypted Email
+ProtonMail sends your secure emails, but it needs a special tool called ProtonMail Bridge.
+Sign up at proton.me if you don’t have an account (use @protonmail.com or @proton.me).
+Download ProtonMail Bridge from proton.me/support/protonmail-bridge (Windows or Mac only).
+Install and run ProtonMail Bridge (log in with your ProtonMail account).
+In Bridge, go to "Mailbox configuration" and note your password (it’s different from your login password).
+Open secure_scanner.py in your text editor.
+Find the send_encrypted_email function.
+Replace "YOUR_PROTONMAIL_ADDRESS@protonmail.com" with your ProtonMail email (e.g., myname@protonmail.com).
+Replace "YOUR_BRIDGE_PASSWORD" with the password from Bridge.
+Save the file.
+Step 6: Run the Script
+Open Command Prompt or Terminal.
+Go to the folder with secure_scanner.py (e.g., type cd Desktop if it’s there).
+Type python secure_scanner.py --go-dummy-mode and press Enter.
+A window (GUI) will appear with controls.
+Step 7: Use the Port Scanner
+In the GUI, look at the "Port Scanner" section.
+Type a host (e.g., localhost) in the "Host" box.
+Keep "Start Port" as 1 and "End Port" as 100 (or change them).
+Click "Scan"—results will show in the box below (e.g., "Port 80: open").
+Step 8: Use the Chat Server
+In "Encrypted Chat", keep "Server Host" as 0.0.0.0 and "Port" as 8888.
+Click "Start Server"—the status will say "Server running".
+You’ll need a Signal client to test (for now, it’s set up but needs a connection).
+Step 9: Send an SMS with Phantom Reaper
+In "Remote Number/Email", type a phone number (e.g., +15551234567—test with your own).
+In "Message", type "Hi there!".
+Click "Phantom Reaper"—check your phone for the SMS.
+Step 10: Send an Encrypted Email
+In "Remote Number/Email", type an email (e.g., friend@protonmail.com).
+In "Message", type "Top secret!".
+Choose "3 sec" from "Email Key Rotation".
+Click "Send Encrypted Email"—check the email (it’ll be encrypted).
+Spanish Version: Instrucciones Paso a Paso para un Principiante en Python
+Paso 1: Instalar Python
+Python es el programa que ejecuta tu código.
+Abre tu navegador y ve a python.org.
+Haz clic en "Downloads" y elige la última versión (ej., Python 3.11).
+Descarga el instalador para tu sistema (Windows, Mac o Linux).
+Abre el archivo descargado para iniciar la instalación.
+Marca la casilla "Add Python to PATH" para que tu computadora lo encuentre.
+Haz clic en "Install Now" y espera a que termine.
+Para probar: Abre el Símbolo del Sistema (Windows: busca "cmd") o Terminal (Mac/Linux), escribe python --version y presiona Enter. Deberías ver "Python 3.11.5" o similar.
+Paso 2: Instalar Librerías Requeridas
+Las librerías añaden funciones extra a Python.
+Abre el Símbolo del Sistema o Terminal.
+Escribe estos comandos uno por uno, presionando Enter después de cada uno:
+pip install cryptography (para cifrado).
+pip install libsignal-protocol-python (para Signal).
+pip install twilio (para SMS).
+Espera a que cada comando termine (verás texto pasar).
+Para verificar: Escribe pip list y busca cryptography, twilio, etc., en la lista.
+Paso 3: Guardar el Script
+El script es tu programa principal.
+Abre un editor de texto (ej., Notepad en Windows, TextEdit en Mac o VS Code).
+Copia todo el script de arriba.
+Pégalo en el editor de texto.
+Guárdalo como secure_scanner.py (asegúrate de que termine en .py).
+Guárdalo en una carpeta fácil de encontrar, como "Escritorio" o "Documentos".
+Paso 4: Configurar Twilio para SMS (Phantom Reaper)
+Twilio te permite enviar mensajes SMS.
+Ve a twilio.com y regístrate con un correo y contraseña.
+Después de iniciar sesión, haz clic en "Get a Twilio phone number" y copia el número (ej., +1-555-123-4567).
+En el panel de Twilio, encuentra "Account SID" y "Auth Token" y cópialos.
+Abre secure_scanner.py en tu editor de texto.
+Busca la función phantom_reaper_connect.
+Reemplaza YOUR_ACCOUNT_SID, YOUR_AUTH_TOKEN y YOUR_TWILIO_NUMBER con tus datos de Twilio.
+Guarda el archivo.
+Paso 5: Configurar ProtonMail para Correo Cifrado
+ProtonMail envía tus correos seguros, pero necesita ProtonMail Bridge.
+Regístrate en proton.me si no tienes cuenta (usa @protonmail.com o @proton.me).
+Descarga ProtonMail Bridge desde proton.me/support/protonmail-bridge (solo Windows o Mac).
+Instala y ejecuta ProtonMail Bridge (inicia sesión con tu cuenta).
+En Bridge, ve a "Mailbox configuration" y anota tu contraseña (es diferente a tu contraseña de inicio).
+Abre secure_scanner.py en tu editor.
+Busca la función send_encrypted_email.
+Reemplaza "YOUR_PROTONMAIL_ADDRESS@protonmail.com" con tu correo ProtonMail (ej., minombre@protonmail.com).
+Reemplaza "YOUR_BRIDGE_PASSWORD" con la contraseña de Bridge.
+Guarda el archivo.
+Paso 6: Ejecutar el Script
+Abre el Símbolo del Sistema o Terminal.
+Ve a la carpeta con secure_scanner.py (ej., escribe cd Escritorio si está ahí).
+Escribe python secure_scanner.py --go-dummy-mode y presiona Enter.
+Aparecerá una ventana (GUI) con controles.
+Paso 7: Usar el Escáner de Puertos
+En la GUI, mira la sección "Port Scanner".
+Escribe un host (ej., localhost) en el cuadro "Host".
+Deja "Start Port" en 1 y "End Port" en 100 (o cámbialos).
+Haz clic en "Scan"—los resultados aparecerán abajo (ej., "Port 80: open").
+Paso 8: Usar el Servidor de Chat
+En "Encrypted Chat", deja "Server Host" como 0.0.0.0 y "Port" como 8888.
+Haz clic en "Start Server"—el estado dirá "Server running".
+Necesitas un cliente Signal para probar (por ahora, está listo pero necesita conexión).
+Paso 9: Enviar un SMS con Phantom Reaper
+En "Remote Number/Email", escribe un número (ej., +15551234567—prueba con el tuyo).
+En "Message", escribe "¡Hola!".
+Haz clic en "Phantom Reaper"—revisa tu teléfono para el SMS.
+Paso 10: Enviar un Correo Cifrado
+En "Remote Number/Email", escribe un correo (ej., amigo@protonmail.com).
+En "Message", escribe "¡Secreto!".
+Elige "3 sec" en "Email Key Rotation".
+Haz clic en "Send Encrypted Email"—revisa el correo (estará cifrado).
+French Version: Instructions Pas à Pas pour un Débutant en Python
+Étape 1 : Installer Python
+Python est le programme qui exécute votre code.
+Ouvre ton navigateur et va sur python.org.
+Clique sur "Downloads" et choisis la dernière version (ex., Python 3.11).
+Télécharge l’installateur pour ton système (Windows, Mac ou Linux).
+Ouvre le fichier téléchargé pour lancer l’installation.
+Coche la case "Add Python to PATH" pour que ton ordinateur le trouve.
+Clique sur "Install Now" et attends la fin.
+Pour tester : Ouvre l’Invite de commandes (Windows : cherche "cmd") ou le Terminal (Mac/Linux), tape python --version et appuie sur Entrée. Tu devrais voir "Python 3.11.5" ou similaire.
+Étape 2 : Installer les Bibliothèques Requises
+Les bibliothèques ajoutent des fonctionnalités à Python.
+Ouvre l’Invite de commandes ou le Terminal.
+Tape ces commandes une par une, en appuyant sur Entrée après chacune :
+pip install cryptography (pour le chiffrement).
+pip install libsignal-protocol-python (pour Signal).
+pip install twilio (pour les SMS).
+Attends que chaque commande finisse (tu verras du texte défiler).
+Pour vérifier : Tape pip list et cherche cryptography, twilio, etc., dans la liste.
+Étape 3 : Sauvegarder le Script
+Le script est ton programme principal.
+Ouvre un éditeur de texte (ex., Notepad sur Windows, TextEdit sur Mac ou VS Code).
+Copie tout le script ci-dessus.
+Colle-le dans l’éditeur de texte.
+Sauvegarde-le sous secure_scanner.py (assure-toi qu’il finit par .py).
+Sauvegarde-le dans un dossier facile à trouver, comme "Bureau" ou "Documents".
+Étape 4 : Configurer Twilio pour les SMS (Phantom Reaper)
+Twilio te permet d’envoyer des SMS.
+Va sur twilio.com et inscris-toi avec un email et un mot de passe.
+Après connexion, clique sur "Get a Twilio phone number" et copie le numéro (ex., +1-555-123-4567).
+Sur le tableau de bord Twilio, trouve "Account SID" et "Auth Token" et copie-les.
+Ouvre secure_scanner.py dans ton éditeur.
+Cherche la fonction phantom_reaper_connect.
+Remplace YOUR_ACCOUNT_SID, YOUR_AUTH_TOKEN et YOUR_TWILIO_NUMBER par tes données Twilio.
+Sauvegarde le fichier.
+Étape 5 : Configurer ProtonMail pour les Emails Chiffrés
+ProtonMail envoie tes emails sécurisés, mais nécessite ProtonMail Bridge.
+Inscris-toi sur proton.me si tu n’as pas de compte (utilise @protonmail.com ou @proton.me).
+Télécharge ProtonMail Bridge sur proton.me/support/protonmail-bridge (Windows ou Mac uniquement).
+Installe et lance ProtonMail Bridge (connecte-toi avec ton compte).
+Dans Bridge, va à "Mailbox configuration" et note ton mot de passe (différent de ton mot de passe de connexion).
+Ouvre secure_scanner.py dans ton éditeur.
+Cherche la fonction send_encrypted_email.
+Remplace "YOUR_PROTONMAIL_ADDRESS@protonmail.com" par ton email ProtonMail (ex., monnom@protonmail.com).
+Remplace "YOUR_BRIDGE_PASSWORD" par le mot de passe de Bridge.
+Sauvegarde le fichier.
+Étape 6 : Exécuter le Script
+Ouvre l’Invite de commandes ou le Terminal.
+Va dans le dossier avec secure_scanner.py (ex., tape cd Bureau s’il y est).
+Tape python secure_scanner.py --go-dummy-mode et appuie sur Entrée.
+Une fenêtre (GUI) apparaîtra avec des contrôles.
+Étape 7 : Utiliser le Scanner de Ports
+Dans la GUI, regarde la section "Port Scanner".
+Tape un hôte (ex., localhost) dans la case "Host".
+Laisse "Start Port" à 1 et "End Port" à 100 (ou change-les).
+Clique sur "Scan"—les résultats apparaîtront en bas (ex., "Port 80: open").
+Étape 8 : Utiliser le Serveur de Chat
+Dans "Encrypted Chat", laisse "Server Host" à 0.0.0.0 et "Port" à 8888.
+Clique sur "Start Server"—le statut dira "Server running".
+Il faut un client Signal pour tester (pour l’instant, c’est prêt mais nécessite une connexion).
+Étape 9 : Envoyer un SMS avec Phantom Reaper
+Dans "Remote Number/Email", tape un numéro (ex., +15551234567—teste avec le tien).
+Dans "Message", tape "Salut !".
+Clique sur "Phantom Reaper"—vérifie ton téléphone pour le SMS.
+Étape 10 : Envoyer un Email Chiffré
+Dans "Remote Number/Email", tape un email (ex., ami@protonmail.com).
+Dans "Message", tape "Secret !".
+Choisis "3 sec" dans "Email Key Rotation".
+Clique sur "Send Encrypted Email"—vérifie l’email (il sera chiffré).
+German Version: Schritt-für-Schritt-Anleitung für einen Python-Anfänger
+Schritt 1: Python Installieren
+Python ist das Programm, das deinen Code ausführt.
+Öffne deinen Browser und gehe zu python.org.
+Klicke auf "Downloads" und wähle die neueste Version (z.B. Python 3.11).
+Lade das Installationsprogramm für dein System herunter (Windows, Mac oder Linux).
+Öffne die heruntergeladene Datei, um die Installation zu starten.
+Aktiviere die Option "Add Python to PATH", damit dein Computer es findet.
+Klicke auf "Install Now" und warte, bis es fertig ist.
+Zum Testen: Öffne die Eingabeaufforderung (Windows: suche "cmd") oder das Terminal (Mac/Linux), tippe python --version und drücke Enter. Du solltest "Python 3.11.5" oder ähnliches sehen.
+Schritt 2: Erforderliche Bibliotheken Installieren
+Bibliotheken fügen Python zusätzliche Funktionen hinzu.
+Öffne die Eingabeaufforderung oder das Terminal.
+Gib diese Befehle einzeln ein und drücke nach jedem Enter:
+pip install cryptography (für Verschlüsselung).
+pip install libsignal-protocol-python (für Signal).
+pip install twilio (für SMS).
+Warte, bis jeder Befehl abgeschlossen ist (Text scrollt vorbei).
+Zum Überprüfen: Gib pip list ein und suche nach cryptography, twilio, etc., in der Liste.
+Schritt 3: Das Skript Speichern
+Das Skript ist dein Hauptprogramm.
+Öffne einen Texteditor (z.B. Notepad unter Windows, TextEdit unter Mac oder VS Code).
+Kopiere das gesamte Skript von oben.
+Füge es in den Texteditor ein.
+Speichere es als secure_scanner.py (stelle sicher, dass es mit .py endet).
+Speichere es in einem leicht auffindbaren Ordner, wie "Desktop" oder "Dokumente".
+Schritt 4: Twilio für SMS Einrichten (Phantom Reaper)
+Twilio ermöglicht das Senden von SMS.
+Gehe zu twilio.com und melde dich mit einer E-Mail und einem Passwort an.
+Nach dem Einloggen klicke auf "Get a Twilio phone number" und kopiere die Nummer (z.B. +1-555-123-4567).
+Finde im Twilio-Dashboard "Account SID" und "Auth Token" und kopiere sie.
+Öffne secure_scanner.py in deinem Texteditor.
+Suche die Funktion phantom_reaper_connect.
+Ersetze YOUR_ACCOUNT_SID, YOUR_AUTH_TOKEN und YOUR_TWILIO_NUMBER mit deinen Twilio-Daten.
+Speichere die Datei.
+Schritt 5: ProtonMail für Verschlüsselte E-Mails Einrichten
+ProtonMail sendet deine sicheren E-Mails, benötigt aber ProtonMail Bridge.
+Melde dich bei proton.me an, falls du kein Konto hast (nutze @protonmail.com oder @proton.me).
+Lade ProtonMail Bridge von proton.me/support/protonmail-bridge herunter (nur Windows oder Mac).
+Installiere und starte ProtonMail Bridge (melde dich mit deinem Konto an).
+Gehe in Bridge zu "Mailbox configuration" und notiere dein Passwort (es unterscheidet sich vom Anmeldepasswort).
+Öffne secure_scanner.py in deinem Editor.
+Suche die Funktion send_encrypted_email.
+Ersetze "YOUR_PROTONMAIL_ADDRESS@protonmail.com" mit deiner ProtonMail-Adresse (z.B. meinname@protonmail.com).
+Ersetze "YOUR_BRIDGE_PASSWORD" mit dem Passwort von Bridge.
+Speichere die Datei.
+Schritt 6: Das Skript Ausführen
+Öffne die Eingabeaufforderung oder das Terminal.
+Gehe zum Ordner mit secure_scanner.py (z.B. tippe cd Desktop, wenn es dort ist).
+Gib python secure_scanner.py --go-dummy-mode ein und drücke Enter.
+Ein Fenster (GUI) mit Steuerungen erscheint.
+Schritt 7: Den Port-Scanner Nutzen
+In der GUI, schaue auf den Abschnitt "Port Scanner".
+Gib einen Host (z.B. localhost) in das "Host"-Feld ein.
+Lasse "Start Port" bei 1 und "End Port" bei 100 (oder ändere sie).
+Klicke auf "Scan"—Ergebnisse erscheinen unten (z.B. "Port 80: open").
+Schritt 8: Den Chat-Server Nutzen
+In "Encrypted Chat", lasse "Server Host" bei 0.0.0.0 und "Port" bei 8888.
+Klicke auf "Start Server"—der Status zeigt "Server running".
+Du brauchst einen Signal-Client zum Testen (vorerst ist es bereit, aber braucht eine Verbindung).
+Schritt 9: SMS mit Phantom Reaper Senden
+In "Remote Number/Email", gib eine Nummer ein (z.B. +15551234567—teste mit deiner eigenen).
+In "Message", tippe "Hallo!".
+Klicke auf "Phantom Reaper"—überprüfe dein Telefon für die SMS.
+Schritt 10: Verschlüsselte E-Mail Senden
+In "Remote Number/Email", gib eine E-Mail ein (z.B. freund@protonmail.com).
+In "Message", tippe "Geheim!".
+Wähle "3 sec" bei "Email Key Rotation".
+Klicke auf "Send Encrypted Email"—überprüfe die E-Mail (sie wird verschlüsselt sein).
+Russian Version: Пошаговые Инструкции для Новичка в Python
+Шаг 1: Установить Python
+Python — это программа, которая запускает ваш код.
+Откройте браузер и перейдите на python.org.
+Нажмите "Downloads" и выберите последнюю версию (например, Python 3.11).
+Скачайте установщик для вашей системы (Windows, Mac или Linux).
+Откройте скачанный файл, чтобы начать установку.
+Отметьте галочку "Add Python to PATH", чтобы компьютер мог его найти.
+Нажмите "Install Now" и дождитесь завершения.
+Для проверки: Откройте командную строку (Windows: найдите "cmd") или терминал (Mac/Linux), введите python --version и нажмите Enter. Вы должны увидеть "Python 3.11.5" или что-то похожее.
+Шаг 2: Установить Необходимые Библиотеки
+Библиотеки добавляют Python дополнительные возможности.
+Откройте командную строку или терминал.
+Введите эти команды по одной, нажимая Enter после каждой:
+pip install cryptography (для шифрования).
+pip install libsignal-protocol-python (для Signal).
+pip install twilio (для SMS).
+Дождитесь завершения каждой команды (текст будет прокручиваться).
+Для проверки: Введите pip list и найдите cryptography, twilio и т.д. в списке.
+Шаг 3: Сохранить Скрипт
+Скрипт — это ваша основная программа.
+Откройте текстовый редактор (например, Блокнот на Windows, TextEdit на Mac или VS Code).
+Скопируйте весь скрипт сверху.
+Вставьте его в текстовый редактор.
+Сохраните как secure_scanner.py (убедитесь, что он заканчивается на .py).
+Сохраните в папку, которую легко найти, например, "Рабочий стол" или "Документы".
+Шаг 4: Настроить Twilio для SMS (Phantom Reaper)
+Twilio позволяет отправлять SMS.
+Перейдите на twilio.com и зарегистрируйтесь с email и паролем.
+После входа нажмите "Get a Twilio phone number" и скопируйте номер (например, +1-555-123-4567).
+На панели Twilio найдите "Account SID" и "Auth Token" и скопируйте их.
+Откройте secure_scanner.py в текстовом редакторе.
+Найдите функцию phantom_reaper_connect.
+Замените YOUR_ACCOUNT_SID, YOUR_AUTH_TOKEN и YOUR_TWILIO_NUMBER на ваши данные Twilio.
+Сохраните файл.
+Шаг 5: Настроить ProtonMail для Зашифрованных Писем
+ProtonMail отправляет ваши защищенные письма, но требует ProtonMail Bridge.
+Зарегистрируйтесь на proton.me, если у вас нет аккаунта (используйте @protonmail.com или @proton.me).
+Скачайте ProtonMail Bridge с proton.me/support/protonmail-bridge (только Windows или Mac).
+Установите и запустите ProtonMail Bridge (войдите в свой аккаунт).
+В Bridge перейдите в "Mailbox configuration" и запишите пароль (он отличается от пароля входа).
+Откройте secure_scanner.py в редакторе.
+Найдите функцию send_encrypted_email.
+Замените "YOUR_PROTONMAIL_ADDRESS@protonmail.com" на ваш адрес ProtonMail (например, moeimya@protonmail.com).
+Замените "YOUR_BRIDGE_PASSWORD" на пароль от Bridge.
+Сохраните файл.
+Шаг 6: Запустить Скрипт
+Откройте командную строку или терминал.
+Перейдите в папку с secure_scanner.py (например, введите cd Рабочий стол, если он там).
+Введите python secure_scanner.py --go-dummy-mode и нажмите Enter.
+Появится окно (GUI) с элементами управления.
+Шаг 7: Использовать Сканер Портов
+В GUI найдите раздел "Port Scanner".
+Введите хост (например, localhost) в поле "Host".
+Оставьте "Start Port" на 1 и "End Port" на 100 (или измените).
+Нажмите "Scan"—результаты появятся ниже (например, "Port 80: open").
+Шаг 8: Использовать Сервер Чата
+В "Encrypted Chat" оставьте "Server Host" как 0.0.0.0 и "Port" как 8888.
+Нажмите "Start Server"—статус покажет "Server running".
+Для теста нужен клиент Signal (пока он готов, но требует подключения).
+Шаг 9: Отправить SMS с Phantom Reaper
+В "Remote Number/Email" введите номер (например, +15551234567—проверьте на своем).
+В "Message" напишите "Привет!".
+Нажмите "Phantom Reaper"—проверьте телефон на наличие SMS.
+Шаг 10: Отправить Зашифрованное Письмо
+В "Remote Number/Email" введите email (например, drug@protonmail.com).
+В "Message" напишите "Секрет!".
+Выберите "3 sec" в "Email Key Rotation".
+Нажмите "Send Encrypted Email"—проверьте письмо (оно будет зашифровано).
