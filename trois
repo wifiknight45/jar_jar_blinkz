@@ -24,39 +24,67 @@ logger = logging.getLogger(__name__)
 
 class SecurePortScanner:
     def __init__(self):
-        # ... (ECC key generation and other initialization) ...
         self.signal_store = signal_protocol.InMemoryStore()  # Or a persistent store
 
     def generate_changelog_key(self):
-        # ... (same as before) ...
+        salt = os.urandom(16)
+        password = secrets.token_urlsafe(32).encode()
+        kdf = PBKDF2HMAC(
+            algorithm=hashes.SHA256(),
+            length=32,
+            salt=salt,
+            iterations=100000,
+            backend=default_backend()
+        )
+        key = kdf.derive(password)
+        return key, salt, password.decode()
 
-    def encrypt_changelog(self, data):
-        # ... (same as before) ...
+    def encrypt_changelog(self, data, key, salt):
+        iv = os.urandom(16)
+        cipher = Cipher(
+            algorithms.AES(key),
+            modes.CFB(iv),
+            backend=default_backend()
+        )
+        encryptor = cipher.encryptor()
+        encrypted_data = encryptor.update(data.encode()) + encryptor.finalize()
+        return base64.b64encode(salt + iv + encrypted_data).decode()
 
     def generate_user_credentials(self):
-        # ... (same as before) ...
+        user_id = str(uuid.uuid4())
+        secret = secrets.token_urlsafe(32)
+        hashed_secret = hashlib.sha256(secret.encode()).hexdigest()
+        return user_id, secret, hashed_secret
 
     def scan_port(self, host, port, timeout=1):
         try:
-            # ... (original code) ...
+            with socket.create_connection((host, port), timeout=timeout) as sock:
+                return port, True
         except socket.timeout:
             logger.warning(f"Timeout scanning port {port} on {host}")
-            return port, False  # Consider retry logic
+            return port, False
         except ConnectionRefusedError:
             logger.info(f"Connection refused to port {port} on {host}")
             return port, False
         except OSError as e:
             logger.error(f"OSError scanning port {port} on {host}: {e}")
-            # ... (handle critical error, potentially stop scanning) ...
+            return port, False
         except Exception as e:
             logger.exception(f"Unexpected error scanning port {port} on {host}: {e}")
-            # ... (handle or re-raise) ...
+            return port, False
 
     def port_scan(self, host, start_port, end_port):
-        # ... (same as before) ...
+        results = {}
+        for port in range(start_port, end_port + 1):
+            port, is_open = self.scan_port(host, port)
+            results[port] = is_open
+        return results
 
     def encrypted_chat_server(self, host='0.0.0.0', port=8888):
-        # ... (create server socket) ...
+        server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server.bind((host, port))
+        server.listen(5)
+        logger.info(f"Chat server started on {host}:{port}")
 
         while True:
             client, addr = server.accept()
@@ -65,11 +93,9 @@ class SecurePortScanner:
     def handle_client(self, client, addr):
         """Handle chat client connection with Signal Protocol"""
         try:
-            # ... (establish Signal Protocol session) ...
             recipient_id = "recipient_id"  # Replace with actual recipient ID
             device_id = 1  # Replace with actual device ID
             session_builder = signal_protocol.SessionBuilder(self.signal_store, recipient_id, device_id)
-            # ... (exchange pre-keys, establish session) ...
             session_cipher = signal_protocol.SessionCipher(self.signal_store, recipient_id, device_id)
 
             while True:
@@ -89,36 +115,38 @@ class SecurePortScanner:
         except Exception as e:
             logger.exception(f"Error establishing Signal Protocol session with {addr}: {e}")
 
-
 def main():
-    # ... (argument parsing) ...
+    parser = argparse.ArgumentParser(description="Secure Port Scanner and Encrypted Chat Server")
+    parser.add_argument('--chat', action='store_true', help="Start the encrypted chat server")
+    parser.add_argument('--scan', action='store_true', help="Perform a port scan")
+    parser.add_argument('--host', type=str, default='localhost', help="Host to scan or bind server")
+    parser.add_argument('--start-port', type=int, default=1, help="Start port for scanning")
+    parser.add_argument('--end-port', type=int, default=65535, help="End port for scanning")
+    args = parser.parse_args()
 
     scanner = SecurePortScanner()
 
-    # ... (user credentials generation) ...
-
     if args.chat:
-        scanner.encrypted_chat_server()
-    else:
-        # ... (port scanning and changelog update) ...
+        scanner.encrypted_chat_server(host=args.host)
+    elif args.scan:
+        results = scanner.port_scan(args.host, args.start_port, args.end_port)
+        for port, is_open in results.items():
+            status = "open" if is_open else "closed"
+            logger.info(f"Port {port} is {status}")
 
 def install():
     """Encrypted installation with persistence"""
-    # ... (generate RSA key pair) ...
     public_key, private_key = rsa.newkeys(2048)
-
-    # ... (encrypt sensitive data with public key) ...
+    data = "sensitive data to encrypt"  # This should be the actual sensitive data
     encrypted_data = rsa.encrypt(data.encode(), public_key)
 
-    # ... (store encrypted data and public key securely) ...
     with open("config.encrypted", "wb") as f:
         f.write(encrypted_data)
-    # ... (store public key securely) ...
+    with open("public_key.pem", "wb") as f:
+        f.write(public_key.save_pkcs1())
 
 if __name__ == "__main__":
     if os.path.exists("config.encrypted"):
-        # If installed, run main function
         main()
     else:
-        # If not installed, run installation
         install()
