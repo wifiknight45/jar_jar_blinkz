@@ -1,73 +1,90 @@
 English Version: Step-by-Step Instructions for a Python Beginner
-Step 1: Install Python
-Python is the program that runs your code.
-Open your web browser and go to python.org.
-Click "Downloads" and choose the latest version (e.g., Python 3.11).
-Download the installer for your system (Windows, Mac, or Linux).
-Open the downloaded file to start the installer.
-Check the box "Add Python to PATH" so your computer knows where to find it.
-Click "Install Now" and wait for it to finish.
+
+Step 1: Install Python (Python is the program that runs your code, python3 is the most up-to-date version and backwards compatible with python2 & python1 respectively. 
+    a) Open your web browser and go to https://python.org.
+    b) Click "Downloads" and choose the latest version (e.g., Python 3.11).
+    c) Download the installer for your system (Windows, Mac, or Linux).
+    d) Open the downloaded file to start the installer.
+    e) Check the box "Add Python to PATH" so your computer knows where to find it.
+    f) Click "Install Now" and wait for it to finish.
+
 To test: Open Command Prompt (Windows: search "cmd") or Terminal (Mac/Linux), type python --version, and press Enter. You should see "Python 3.11.5" or similar.
+
 Step 2: Install Required Libraries
-Libraries add extra features to Python, like tools for your project.
-Open Command Prompt or Terminal.
-Type these commands one at a time, pressing Enter after each:
-pip install cryptography (for encryption).
-pip install libsignal-protocol-python (for Signal).
-pip install twilio (for SMS).
-Wait for each command to finish (you’ll see text scroll by).
+  a) Libraries add extra features to Python, like tools for your project.
+  b) Open Command Prompt or Terminal.
+Type the following commands (one at a time), pressing Enter after each:
+commands:
+  1) pip install cryptography (for encryption).
+  2) pip install libsignal-protocol-python (for Signal).
+  3) pip install twilio (for SMS).
+Note: **Wait for each command to finish (you’ll see text scroll by).**
 To check: Type pip list and look for cryptography, twilio, etc., in the list.
+
 Step 3: Save the Script
-The script is your main program.
-Open a text editor (e.g., Notepad on Windows, TextEdit on Mac, or VS Code).
-Copy the entire script from above.
-Paste it into the text editor.
-Save it as secure_scanner.py (ensure it ends with .py).
-Save it in a folder you can find, like "Desktop" or "Documents".
+    a) The script is your main program.
+    b) Open a text editor (e.g., Notepad on Windows, TextEdit on Mac, or VS Code).
+    c) Copy the entire script from above.
+    d) Paste it into the text editor.
+    e) Save it as jar_jar_blinkz.py (ensure it ends with .py as this means python etc).
+    f) Save it in a folder you can find, like "Desktop" or "Documents".
+
 Step 4: Set Up Twilio for SMS (Phantom Reaper)
-Twilio lets you send SMS messages.
-Go to twilio.com and sign up with an email and password.
-After signing in, click "Get a Twilio phone number" and copy the number (e.g., +1-555-123-4567).
-On the Twilio dashboard, find "Account SID" and "Auth Token" and copy them.
-Open secure_scanner.py in your text editor.
-Find the phantom_reaper_connect function.
-Replace YOUR_ACCOUNT_SID, YOUR_AUTH_TOKEN, and YOUR_TWILIO_NUMBER with your Twilio details.
-Save the file.
+    a) Twilio lets you send SMS messages; Go to twilio.com and sign up with an email and password.
+    b) After signing in, click "Get a Twilio phone number" and copy the number (e.g., +1-555-123-4567).
+    c) On the Twilio dashboard, find "Account SID" and "Auth Token" and copy them.
+    d) Open secure_scanner.py in your text editor.
+    e) Find the phantom_reaper_connect function.
+    f) Replace YOUR_ACCOUNT_SID, YOUR_AUTH_TOKEN, and YOUR_TWILIO_NUMBER with your Twilio details.
+    g) Save the file.
+
 Step 5: Set Up ProtonMail for Encrypted Email
-ProtonMail sends your secure emails, but it needs a special tool called ProtonMail Bridge.
-Sign up at proton.me if you don’t have an account (use @protonmail.com or @proton.me).
-Download ProtonMail Bridge from proton.me/support/protonmail-bridge (Windows or Mac only).
-Install and run ProtonMail Bridge (log in with your ProtonMail account).
-In Bridge, go to "Mailbox configuration" and note your password (it’s different from your login password).
-Open secure_scanner.py in your text editor.
-Find the send_encrypted_email function.
-Replace "YOUR_PROTONMAIL_ADDRESS@protonmail.com" with your ProtonMail email (e.g., myname@protonmail.com).
-Replace "YOUR_BRIDGE_PASSWORD" with the password from Bridge.
-Save the file.
+    a) ProtonMail sends your secure emails, but it needs a special tool called ProtonMail Bridge.
+    b) Sign up at proton.me if you don’t have an account (use @protonmail.com or @proton.me).
+    c) Download ProtonMail Bridge from proton.me/support/protonmail-bridge (Windows or Mac only).
+    d) Install and run ProtonMail Bridge (log in with your ProtonMail account).
+    e) In Bridge, go to "Mailbox configuration" and note your password (it’s different from your login password).
+    f) Open jar_jar_blinkz.py in your text editor.
+    g) Find the send_encrypted_email function.
+    h) Replace "YOUR_PROTONMAIL_ADDRESS@protonmail.com" with your ProtonMail email (e.g., myname@protonmail.com).
+    i) Replace "YOUR_BRIDGE_PASSWORD" with the password from Bridge.
+    j) Save the file.
+
 Step 6: Run the Script
-Open Command Prompt or Terminal.
-Go to the folder with secure_scanner.py (e.g., type cd Desktop if it’s there).
-Type python secure_scanner.py --go-dummy-mode and press Enter.
-A window (GUI) will appear with controls.
+  a) Open Command Prompt or Terminal.
+  b) Go to the folder with jar_jar_blinkz.py (e.g., type cd Desktop if it’s there).
+  c) Type python secure_scanner.py --go-dummy-mode and press Enter.
+  d) A window (GUI) will appear with controls.
+
 Step 7: Use the Port Scanner
-In the GUI, look at the "Port Scanner" section.
-Type a host (e.g., localhost) in the "Host" box.
-Keep "Start Port" as 1 and "End Port" as 100 (or change them).
-Click "Scan"—results will show in the box below (e.g., "Port 80: open").
+  a) In the GUI, look at the "Port Scanner" section.
+  b) Type a host (e.g., localhost) in the "Host" box.
+  c) Keep "Start Port" as 1 and "End Port" as 100 (or change them).
+  d) Click "Scan"—results will show in the box below (e.g., "Port 80: open").
+
 Step 8: Use the Chat Server
-In "Encrypted Chat", keep "Server Host" as 0.0.0.0 and "Port" as 8888.
-Click "Start Server"—the status will say "Server running".
-You’ll need a Signal client to test (for now, it’s set up but needs a connection).
+  a) In "Encrypted Chat", keep "Server Host" as 0.0.0.0 and "Port" as 8888.
+  b) Click "Start Server"—the status will say "Server running".
+  c) You’ll need a Signal client to test (for now, it’s set up but needs a connection).
+
 Step 9: Send an SMS with Phantom Reaper
-In "Remote Number/Email", type a phone number (e.g., +15551234567—test with your own).
-In "Message", type "Hi there!".
-Click "Phantom Reaper"—check your phone for the SMS.
+  a) In "Remote Number/Email", type a phone number (e.g., +15551234567—test with your own).
+  b) In "Message", type "Hi there!".
+  c) Click "Phantom Reaper"—check your phone for the SMS.
+
 Step 10: Send an Encrypted Email
-In "Remote Number/Email", type an email (e.g., friend@protonmail.com).
-In "Message", type "Top secret!".
-Choose "3 sec" from "Email Key Rotation".
-Click "Send Encrypted Email"—check the email (it’ll be encrypted).
-Spanish Version: Instrucciones Paso a Paso para un Principiante en Python
+  a) In "Remote Number/Email", type an email (e.g., friend@protonmail.com).
+  b) In "Message", type "Top secret!".
+  c) Choose "3 sec" from "Email Key Rotation".
+  d) Click "Send Encrypted Email"—check the email (it’ll be encrypted).
+
+Various Languages versions of the README are listed below in the following order: 
+  I. Spanish
+  II. French 
+  III. German 
+  IV. Russian 
+
+I. Spanish Version: Instrucciones Paso a Paso para un Principiante en Python
 Paso 1: Instalar Python
 Python es el programa que ejecuta tu código.
 Abre tu navegador y ve a python.org.
@@ -115,8 +132,8 @@ Reemplaza "YOUR_BRIDGE_PASSWORD" con la contraseña de Bridge.
 Guarda el archivo.
 Paso 6: Ejecutar el Script
 Abre el Símbolo del Sistema o Terminal.
-Ve a la carpeta con secure_scanner.py (ej., escribe cd Escritorio si está ahí).
-Escribe python secure_scanner.py --go-dummy-mode y presiona Enter.
+Ve a la carpeta con jar_jar_blinkz.py (ej., escribe cd Escritorio si está ahí).
+Escribe python jar_jar_blinkz.py --go-dummy-mode y presiona Enter.
 Aparecerá una ventana (GUI) con controles.
 Paso 7: Usar el Escáner de Puertos
 En la GUI, mira la sección "Port Scanner".
@@ -136,7 +153,9 @@ En "Remote Number/Email", escribe un correo (ej., amigo@protonmail.com).
 En "Message", escribe "¡Secreto!".
 Elige "3 sec" en "Email Key Rotation".
 Haz clic en "Send Encrypted Email"—revisa el correo (estará cifrado).
-French Version: Instructions Pas à Pas pour un Débutant en Python
+
+
+II. French Version: Instructions Pas à Pas pour un Débutant en Python
 Étape 1 : Installer Python
 Python est le programme qui exécute votre code.
 Ouvre ton navigateur et va sur python.org.
@@ -177,7 +196,7 @@ Inscris-toi sur proton.me si tu n’as pas de compte (utilise @protonmail.com ou
 Télécharge ProtonMail Bridge sur proton.me/support/protonmail-bridge (Windows ou Mac uniquement).
 Installe et lance ProtonMail Bridge (connecte-toi avec ton compte).
 Dans Bridge, va à "Mailbox configuration" et note ton mot de passe (différent de ton mot de passe de connexion).
-Ouvre secure_scanner.py dans ton éditeur.
+Ouvre jar_jar_blinkz.py dans ton éditeur.
 Cherche la fonction send_encrypted_email.
 Remplace "YOUR_PROTONMAIL_ADDRESS@protonmail.com" par ton email ProtonMail (ex., monnom@protonmail.com).
 Remplace "YOUR_BRIDGE_PASSWORD" par le mot de passe de Bridge.
@@ -185,7 +204,7 @@ Sauvegarde le fichier.
 Étape 6 : Exécuter le Script
 Ouvre l’Invite de commandes ou le Terminal.
 Va dans le dossier avec secure_scanner.py (ex., tape cd Bureau s’il y est).
-Tape python secure_scanner.py --go-dummy-mode et appuie sur Entrée.
+Tape python jar_jar_blinkz.py --go-dummy-mode et appuie sur Entrée.
 Une fenêtre (GUI) apparaîtra avec des contrôles.
 Étape 7 : Utiliser le Scanner de Ports
 Dans la GUI, regarde la section "Port Scanner".
@@ -205,7 +224,8 @@ Dans "Remote Number/Email", tape un email (ex., ami@protonmail.com).
 Dans "Message", tape "Secret !".
 Choisis "3 sec" dans "Email Key Rotation".
 Clique sur "Send Encrypted Email"—vérifie l’email (il sera chiffré).
-German Version: Schritt-für-Schritt-Anleitung für einen Python-Anfänger
+
+III. German Version: Schritt-für-Schritt-Anleitung für einen Python-Anfänger
 Schritt 1: Python Installieren
 Python ist das Programm, das deinen Code ausführt.
 Öffne deinen Browser und gehe zu python.org.
@@ -229,14 +249,14 @@ Das Skript ist dein Hauptprogramm.
 Öffne einen Texteditor (z.B. Notepad unter Windows, TextEdit unter Mac oder VS Code).
 Kopiere das gesamte Skript von oben.
 Füge es in den Texteditor ein.
-Speichere es als secure_scanner.py (stelle sicher, dass es mit .py endet).
+Speichere es als jar_jar_blinkz.py (stelle sicher, dass es mit .py endet).
 Speichere es in einem leicht auffindbaren Ordner, wie "Desktop" oder "Dokumente".
 Schritt 4: Twilio für SMS Einrichten (Phantom Reaper)
 Twilio ermöglicht das Senden von SMS.
 Gehe zu twilio.com und melde dich mit einer E-Mail und einem Passwort an.
 Nach dem Einloggen klicke auf "Get a Twilio phone number" und kopiere die Nummer (z.B. +1-555-123-4567).
 Finde im Twilio-Dashboard "Account SID" und "Auth Token" und kopiere sie.
-Öffne secure_scanner.py in deinem Texteditor.
+Öffne jar_jar_blinkz.py in deinem Texteditor.
 Suche die Funktion phantom_reaper_connect.
 Ersetze YOUR_ACCOUNT_SID, YOUR_AUTH_TOKEN und YOUR_TWILIO_NUMBER mit deinen Twilio-Daten.
 Speichere die Datei.
@@ -246,14 +266,14 @@ Melde dich bei proton.me an, falls du kein Konto hast (nutze @protonmail.com ode
 Lade ProtonMail Bridge von proton.me/support/protonmail-bridge herunter (nur Windows oder Mac).
 Installiere und starte ProtonMail Bridge (melde dich mit deinem Konto an).
 Gehe in Bridge zu "Mailbox configuration" und notiere dein Passwort (es unterscheidet sich vom Anmeldepasswort).
-Öffne secure_scanner.py in deinem Editor.
+Öffne jar_jar_blinkz.py in deinem Editor.
 Suche die Funktion send_encrypted_email.
 Ersetze "YOUR_PROTONMAIL_ADDRESS@protonmail.com" mit deiner ProtonMail-Adresse (z.B. meinname@protonmail.com).
 Ersetze "YOUR_BRIDGE_PASSWORD" mit dem Passwort von Bridge.
 Speichere die Datei.
 Schritt 6: Das Skript Ausführen
 Öffne die Eingabeaufforderung oder das Terminal.
-Gehe zum Ordner mit secure_scanner.py (z.B. tippe cd Desktop, wenn es dort ist).
+Gehe zum Ordner mit jar_jar_blinkz.py (z.B. tippe cd Desktop, wenn es dort ist).
 Gib python secure_scanner.py --go-dummy-mode ein und drücke Enter.
 Ein Fenster (GUI) mit Steuerungen erscheint.
 Schritt 7: Den Port-Scanner Nutzen
@@ -274,7 +294,8 @@ In "Remote Number/Email", gib eine E-Mail ein (z.B. freund@protonmail.com).
 In "Message", tippe "Geheim!".
 Wähle "3 sec" bei "Email Key Rotation".
 Klicke auf "Send Encrypted Email"—überprüfe die E-Mail (sie wird verschlüsselt sein).
-Russian Version: Пошаговые Инструкции для Новичка в Python
+
+IV. Russian Version: Пошаговые Инструкции для Новичка в Python
 Шаг 1: Установить Python
 Python — это программа, которая запускает ваш код.
 Откройте браузер и перейдите на python.org.
@@ -291,6 +312,7 @@ Python — это программа, которая запускает ваш �
 pip install cryptography (для шифрования).
 pip install libsignal-protocol-python (для Signal).
 pip install twilio (для SMS).
+
 Дождитесь завершения каждой команды (текст будет прокручиваться).
 Для проверки: Введите pip list и найдите cryptography, twilio и т.д. в списке.
 Шаг 3: Сохранить Скрипт
@@ -315,7 +337,7 @@ ProtonMail отправляет ваши защищенные письма, но
 Скачайте ProtonMail Bridge с proton.me/support/protonmail-bridge (только Windows или Mac).
 Установите и запустите ProtonMail Bridge (войдите в свой аккаунт).
 В Bridge перейдите в "Mailbox configuration" и запишите пароль (он отличается от пароля входа).
-Откройте secure_scanner.py в редакторе.
+Откройте jar_jar_blinkz.py в редакторе.
 Найдите функцию send_encrypted_email.
 Замените "YOUR_PROTONMAIL_ADDRESS@protonmail.com" на ваш адрес ProtonMail (например, moeimya@protonmail.com).
 Замените "YOUR_BRIDGE_PASSWORD" на пароль от Bridge.
