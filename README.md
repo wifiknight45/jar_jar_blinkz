@@ -90,7 +90,7 @@ This is a Python-based tool that combines port scanning and encrypted chat funct
 1. Save the script as `scanner.py`.
 2. Make it executable:
    ```bash
-   chmod +x scanner.py
+   chmod +x jar_jar_blinkz.py
    ```
 3. Install the required library:
    ```bash
@@ -105,19 +105,19 @@ Scan ports on a target host:
 ```bash
 sudo ./scanner.py --host <target_ip> --start-port <start> --end-port <end>
 ```
-- Example: `sudo ./scanner.py --host 192.168.1.1 --start-port 1 --end-port 1000`
+- Example: `sudo ./jar_jar_blinkz.py --host 192.168.1.1 --start-port 1 --end-port 1000`
 
 ### Chat Server
 Start the encrypted chat server:
 ```bash
-./scanner.py --chat
+./jar_jar_blinkz.py --chat
 ```
 - Default host: `0.0.0.0`, port: `8888`
 
 ### Over SSH
 Run remotely via SSH:
 ```bash
-ssh user@remote "bash -c './scanner.py --host localhost'"
+ssh user@remote "bash -c './jar_jar_blinkz.py --host localhost'"
 ```
 
 ## Output
