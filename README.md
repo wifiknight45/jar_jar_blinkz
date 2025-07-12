@@ -87,7 +87,7 @@ This is a Python-based tool that combines port scanning and encrypted chat funct
 - Root privileges for scanning ports below 1024
 
 ## Installation
-1. Save the script as `scanner.py`.
+1. Save the script as `jar_jar_blikz.py`.
 2. Make it executable:
    ```bash
    chmod +x jar_jar_blinkz.py
@@ -103,7 +103,7 @@ Run the script from the command line with these options:
 ### Port Scanning
 Scan ports on a target host:
 ```bash
-sudo ./scanner.py --host <target_ip> --start-port <start> --end-port <end>
+sudo ./jar_jar_blinkz.py --host <target_ip> --start-port <start> --end-port <end>
 ```
 - Example: `sudo ./jar_jar_blinkz.py --host 192.168.1.1 --start-port 1 --end-port 1000`
 
