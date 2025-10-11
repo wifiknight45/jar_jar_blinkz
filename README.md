@@ -1,5 +1,15 @@
-
-
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Security Research](https://img.shields.io/badge/purpose-security%20research-red.svg)](https://github.com/wifiknight45/jar_jar_blinkz)
+[![Cryptography](https://img.shields.io/badge/encryption-AES%20256%20%7C%20RSA%202048%20%7C%20ECC-green.svg)](https://github.com/wifiknight45/jar_jar_blinkz)
+[![Signal Protocol](https://img.shields.io/badge/protocol-Signal-blue.svg)](https://signal.org/docs/)
+[![Twilio](https://img.shields.io/badge/SMS-Twilio-red.svg)](https://www.twilio.com/)
+[![End-to-End Encrypted](https://img.shields.io/badge/E2EE-enabled-brightgreen.svg)](https://github.com/wifiknight45/jar_jar_blinkz)
+[![Network Security](https://img.shields.io/badge/network-port%20scanning-orange.svg)](https://github.com/wifiknight45/jar_jar_blinkz)
+[![Educational Use](https://img.shields.io/badge/use-educational%20only-yellow.svg)](https://github.com/wifiknight45/jar_jar_blinkz)
+[![Ethical Hacking](https://img.shields.io/badge/research-ethical%20security-important.svg)](https://github.com/wifiknight45/jar_jar_blinkz)
+[![Multi-Threading](https://img.shields.io/badge/threading-concurrent%20scanning-blue.svg)](https://github.com/wifiknight45/jar_jar_blinkz)
+[![Key Rotation](https://img.shields.io/badge/keys-auto%20rotation-green.svg)](https://github.com/wifiknight45/jar_jar_blinkz)
 
 
 
