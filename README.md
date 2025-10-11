@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 English Version: Step-by-Step Instructions for a Python Beginner
 
 Step 1: Install Python (Python is the program that runs your code, python3 is the most up-to-date version and backwards compatible with python2 & python1 respectively. 
@@ -21,7 +28,7 @@ commands:
 Note: **Wait for each command to finish (you’ll see text scroll by).**
 To check: Type pip list and look for cryptography, twilio, etc., in the list.
 
-Step 3: Save the Script
+Step 3: Save the desired script version
     a) The script is your main program.
     b) Open a text editor (e.g., Notepad on Windows, TextEdit on Mac, or VS Code).
     c) Copy the entire script from above.
@@ -78,7 +85,7 @@ Step 10: Send an Encrypted Email
   c) Choose "3 sec" from "Email Key Rotation".
   d) Click "Send Encrypted Email"—check the email (it’ll be encrypted).
 
-Various Languages versions of the README are listed below in the following order: 
+Various Languages versions of the README are listed below in the following order after English: 
   I. Spanish
   II. French 
   III. German 
